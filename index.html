@@ -3,47 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Career Analysis System</title>
+  <title>Login - Career Analysis System</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <div class="container">
     <h1>🎓 Career Analysis System</h1>
     <p>12th மாணவர்களுக்கான Career வழிகாட்டி</p>
-  </header>
 
-  <main>
-    <section class="form-section">
-      <h2>உங்கள் விவரங்களை உள்ளிடவும்</h2>
-      <form id="careerForm">
-        <label>மாணவர் பெயர்:</label>
-        <input type="text" id="name" required>
+    <form id="loginForm">
+      <label>பயனர் பெயர்:</label>
+      <input type="text" id="username" required>
 
-        <label>Group தேர்வு:</label>
-        <select id="group" required>
-          <option value="">-- தேர்வு செய்யவும் --</option>
-          <option value="science">Science</option>
-          <option value="commerce">Commerce</option>
-          <option value="arts">Arts</option>
-        </select>
+      <label>கடவுச்சொல்:</label>
+      <input type="password" id="password" required>
 
-        <label>மொத்த சதவீதம் (%):</label>
-        <input type="number" id="percentage" required min="0" max="100">
+      <button type="submit">Login</button>
+    </form>
+  </div>
 
-        <button type="submit">Analyse Career</button>
-      </form>
-    </section>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const user = document.getElementById("username").value.trim();
+      const pass = document.getElementById("password").value.trim();
 
-    <section class="result-section" id="resultSection">
-      <h2>📊 முடிவு</h2>
-      <div id="resultOutput">இங்கே உங்கள் Career பரிந்துரை வரும்.</div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Career Analysis Project | Designed by Computer Science Students</p>
-  </footer>
-
-  <script src="script.js"></script>
+      if(user === "student" && pass === "12345"){
+        localStorage.setItem("username", user);
+        window.location.href = "quiz.html";
+      } else {
+        alert("தவறான பயனர் பெயர் அல்லது கடவுச்சொல்!");
+      }
+    });
+  </script>
 </body>
 </html>
