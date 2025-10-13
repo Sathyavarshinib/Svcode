@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const studentData = JSON.parse(localStorage.getItem("studentData"));
 
   if(!studentData){
-    resultDiv.innerHTML = "தயவுசெய்து முதலில் quiz பூர்த்தி செய்யவும்!";
+    resultDiv.innerHTML = "Please fill the student details quiz!";
     return;
   }
 
@@ -16,11 +16,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
   if(group === "science"){
     if(interest === "computers") {
-      course = "B.Tech Computer Science / B.Sc IT";
+      course = "B.Tech, Computer Science / B.Sc IT";
       profession = "Software Engineer, Data Analyst";
     } else if(interest === "biology"){
       course = "MBBS / BDS / B.Pharm";
-      profession = "Doctor, Pharmacist";
+      profession = "Doctor, Surgeon, Pharmacist";
     } else {
       course = "B.Sc General / Diploma in Engineering";
       profession = "Lab Technician, Technical Assistant";
@@ -60,10 +60,10 @@ document.addEventListener("DOMContentLoaded", function(){
   else college = "Local Arts/Science Colleges or Polytechnic Colleges";
 
   resultDiv.innerHTML = `
-    <strong>மாணவர் பெயர்:</strong> ${name} <br><br>
-    <strong>பரிந்துரைக்கப்பட்ட பாடநெறி:</strong> ${course} <br>
-    <strong>தொழில் வாய்ப்பு:</strong> ${profession} <br>
-    <strong>பரிந்துரைக்கப்பட்ட கல்லூரிகள்:</strong> ${college} <br>
-    <strong>Scholarship வாய்ப்பு:</strong> ${scholarship}
+    <strong>Student name:</strong> ${name} <br><br>
+    <strong>Suggested course:</strong> ${course} <br>
+    <strong>Profession:</strong> ${profession} <br>
+    <strong>Suggested college:</strong> ${college} <br>
+    <strong>Availability of Scholarship:</strong> ${scholarship}
   `;
 });
