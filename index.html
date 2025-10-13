@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ta">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +9,13 @@
 <body>
   <div class="container">
     <h1>🎓 Career Analysis System</h1>
-    <p>12th மாணவர்களுக்கான Career வழிகாட்டி</p>
+    <p>Career Analysis System for 12th students</p>
 
     <form id="loginForm">
-      <label>பயனர் பெயர்:</label>
+      <label>Username:</label>
       <input type="text" id="username" required>
 
-      <label>கடவுச்சொல்:</label>
+      <label>Password:</label>
       <input type="password" id="password" required>
 
       <button type="submit">Login</button>
@@ -32,7 +32,7 @@
         localStorage.setItem("username", user);
         window.location.href = "quiz.html";
       } else {
-        alert("தவறான பயனர் பெயர் அல்லது கடவுச்சொல்!");
+        alert("Username or Password you entered is wrong, please check once again!");
       }
     });
   </script>
