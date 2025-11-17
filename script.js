@@ -17,22 +17,22 @@ document.addEventListener("DOMContentLoaded", function(){
   if(group === "science"){
     if(interest === "computers") {
       course = "B.Tech, Computer Science / B.Sc IT";
-      profession = "Software Engineer, Data Analyst";
+      profession = "Software Engineer, Web developor, Data Analyst";
     } else if(interest === "biology"){
       course = "MBBS / BDS / B.Pharm";
       profession = "Doctor, Surgeon, Pharmacist";
     } else {
       course = "B.Sc General / Diploma in Engineering";
-      profession = "Lab Technician, Technical Assistant";
+      profession = "Lab Technician, lab assistant,Technical Assistant";
     }
   }
   else if(group === "commerce"){
     if(interest === "business"){
       course = "B.Com, BBA, CA";
-      profession = "Accountant, Business Analyst";
+      profession = "Accountant, CMA, company secretary, Business Analyst";
     } else {
       course = "B.Com (General), Banking Courses";
-      profession = "Banking Staff, Clerk";
+      profession = "Banking Staff, Clerk, teacher, manager";
     }
   }
   else if(group === "arts"){
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function(){
       profession = "Journalist, Designer";
     } else {
       course = "BA History / Sociology";
-      profession = "Teacher, Civil Services Aspirant";
+      profession = "Teacher, Civil Services Aspirant, VAO, clerk";
     }
   }
 
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
   // College suggestion
   if(percentage >= 80) college = "Top Government Colleges (Anna University, Loyola, Madras Medical)";
-  else if(percentage >= 60) college = "Good Private Colleges (SRM, PSG, Hindustan)";
+  else if(percentage >= 60) college = "Good Private Colleges (SRM, PSG, Krishnammal,Hindustan)";
   else college = "Local Arts/Science Colleges or Polytechnic Colleges";
 
   resultDiv.innerHTML = `
